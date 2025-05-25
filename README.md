@@ -13,8 +13,77 @@ Play Nopipes Mode [**click**](https://flappydragon.attim.in/?nopipes) 游玩无�
 
 Press 'p' to pause and resume :) 按 'p' 键暂停/继续游戏 :)
 
+## 部署说明
 
-### Credits 致谢
+首先感谢原作者的开源。[原项目地址](https://github.com/iarunava/flappydragon)
+
+具体汉化了那些内容，请参考[翻译说明](./翻译说明.md)。
+
+
+有需要帮忙部署这个项目的朋友,一杯奶茶,即可程远程帮你部署，需要可联系。  
+微信号 `E-0_0-`  
+闲鱼搜索用户 `明月人间`  
+或者邮箱 `firfe163@163.com`  
+如果这个项目有帮到你。欢迎start。
+
+有其他的项目的汉化需求，欢迎提issue。或其他方式联系通知。
+
+### 镜像
+
+从阿里云或华为云镜像仓库拉取镜像，注意填写镜像标签，镜像仓库中没有`latest`标签
+
+容器内部端口 3000 可通过设置环境变量`MINISERVE_PORT`的值来指定监听端口
+
+```bash
+swr.cn-north-4.myhuaweicloud.com/firfe/flappydragon:2025.05.25
+```
+
+### docker run 命令部署
+
+```bash
+docker run -d \
+--name flappydragon \
+--network bridge \
+--restart always \
+--log-opt max-size=1m \
+--log-opt max-file=3 \
+-p 3000:3000 \
+swr.cn-north-4.myhuaweicloud.com/firfe/flappydragon:2025.05.25
+```
+### compose 文件部署 👍推荐
+
+```yaml
+#version: '3.9'
+services:
+  flappydragon:
+    container_name: flappydragon
+    image: swr.cn-north-4.myhuaweicloud.com/firfe/flappydragon:2025.05.25
+    network_mode: bridge
+    restart: always
+    logging:
+      options:
+        max-size: 1m
+        max-file: '3'
+    ports:
+      - 3000:3000
+```
+
+## 修改说明
+
+这里对除了汉化之外的代码修改的说明。  
+增加修改部分具体见 [修改说明](./修改说明.md)。
+
+`./README.md` 文件翻译，增加 `## 部署说明`、`## 修改说明`、`## 效果截图` 部分。
+
+增加目录 `./图片`
+新增文件 `./.dockerignore`、`./Dockerfile`、`./翻译说明.md`、`./修改说明.md`
+
+## 效果截图
+
+<img src="图片/效果图.png" width="500" />
+
+
+## Credits 致谢
 The heavy redesign that has gone in the game is on the assets.  
 游戏的大部分改动集中在美术资源上。
 
