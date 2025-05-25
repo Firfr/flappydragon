@@ -1,24 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
    <head>
       <title>Flappy Dragon</title>
       <meta http-equiv="content-type" content="text/html; charset=utf-8" />
       <meta name="author" content="Nebez Briefkani" />
       <meta name="description" content="play flappy dragon. a remake of popular game flappy bird game." />
-      <meta name="keywords" content="flappybird,flappy,bird,dragon,flappydragon,html,html5,css,css3,js,javascript,jquery,gameofthrones,thrones,game,briefkani,open,source,opensource,wikiofthrones" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+      <!-- <meta name="keywords" content="flappybird,flappy,bird,dragon,flappydragon,html,html5,css,css3,js,javascript,jquery,gameofthrones,thrones,game,briefkani,open,source,opensource,wikiofthrones" /> -->
+      <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" /> -->
 
       <!-- Open Graph tags -->
-      <meta property="og:title" content="Flappy Dragon" />
-      <meta property="og:description" content="Play Flappy Dragon. a remake of popular game flappy bird in dragon style for Game of Thrones. " />
-      <meta property="og:type" content="website" />
-      <meta property="og:image" content="https://github.com/iArunava/flappydragon/raw/master/assets/flappydragon_thumb.png" />
-      <meta property="og:url" content="http://flappydragon.attim.in/" />
-      <meta property="og:site_name" content="Flappy Dragon" />
+      <!-- <meta property="og:title" content="Flappy Dragon" /> -->
+      <!-- <meta property="og:description" content="Play Flappy Dragon. a remake of popular game flappy bird in dragon style for Game of Thrones. " /> -->
+      <!-- <meta property="og:type" content="website" /> -->
+      <!-- <meta property="og:image" content="https://github.com/iArunava/flappydragon/raw/master/assets/flappydragon_thumb.png" /> -->
+      <!-- <meta property="og:url" content="http://flappydragon.attim.in/" /> -->
+      <!-- <meta property="og:site_name" content="Flappy Dragon" /> -->
 
       <!-- Style sheets -->
       <link href="css/reset.css" rel="stylesheet">
       <link href="css/main.css" rel="stylesheet">
+      <style>
+        #firfe-add {
+          text-align: center;
+          position: fixed;
+          bottom: 10px;
+          left: 5px;
+        }
+        #firfe-add a {
+          text-decoration: none;
+          color: rgb(126, 126, 126);
+          padding-left: 8px;
+        }
+      </style>
    </head>
    <body>
       <div id="gamecontainer">
@@ -59,6 +72,11 @@
       <div class="boundingbox" id="playerbox"></div>
       <div class="boundingbox" id="pipebox"></div>
 
+      <div id="firfe-add">
+         <a href="https://github.com/iarunava/flappydragon" target="_blank">原项目仓库</a>
+         <a href="https://github.com/Firfr/flappydragon" target="_blank">镜像制作仓库</a>
+       </div>
+
       <script src="js/jquery.min.js"></script>
       <script src="js/jquery.transit.min.js"></script>
       <script src="js/buzz.min.js"></script>
@@ -79,6 +97,6 @@
          ga('send', 'pageview');
       }
       </script>
-      <script async src='https://www.google-analytics.com/analytics.js'></script>
+      <!-- <script async src='https://www.google-analytics.com/analytics.js'></script> -->
    </body>
 </html>

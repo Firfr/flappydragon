@@ -246,6 +246,7 @@ Screen - Game
    /*height: 170px;*/
    height: 200px;
    background-image: url('../assets/soves_splash.png');
+   background-size: 100% 100%;
    background-repeat: no-repeat;
    margin: auto;
 }
@@ -262,6 +263,7 @@ Screen - Game
    background-image: url('../assets/scoreboard.png');
    background-image: url('../assets/fd_scoreboard.png');
    background-image: url('../assets/fd_scoreboard_2D.png');
+   background-size: 100% 100%;
    background-repeat: no-repeat;
 
    z-index: 1000;
